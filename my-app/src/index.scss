@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form {
+  display: flex;
+}
+
+.title {
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.todo-list {
+  display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    border-radius: 8px;
+    border-color: black;
+
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.75);
+    padding: 8px;
+    min-width: 500px;
+    margin: auto;
+}
+.comment-list{
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.75);
+  padding: 8px;
+  max-width: 400px;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin: auto;
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid black;
+  position: relative;
+  &__color{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin-right: 10px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &_done {
+    opacity: 0.7;
+
+    .list-item__text {
+      text-decoration: line-through;
+    }
+  }
+  &__comments{
+    margin-left: auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgb(10, 192, 162);
+  }
+
+  &__checkbox {
+    margin-right: 8px;
+  }
+
+  &__delete-btn {
+    width: 120px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid red;
+    text-decoration: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    background-color: white;
+
+    &::before {
+      content: "Delete";
+    }
+  }
+}
+
+.btn {
+  height: 32px;
+  min-width: 64px;
+  border: 3px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 16px;
+}
+
+.create-task {
+  display: flex;
+  margin-bottom: 8px;
+
+  &__input {
+    height: 32px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    flex: 1;
+  }
+  &__color{
+    height: 32px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    flex: 1;
+  }
+}
